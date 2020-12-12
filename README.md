@@ -1,43 +1,27 @@
-## HW 17 - Fitness Tracker
+## HW 13 - Eat-da-Burger!
 
 ## Summary
 
-This assignment involved building routes and models to supplement front-end code already provided for a fitness tracking application so that it is fully functional.
+This assignment involved building an app which uses Handlebars and builds-out a basic MVC structure application.
 
-The front-end code had already been built and a directory structure for the html, js for that was provided. Functionally, the provided code enabled entry, saving and update of workouts plus the ability to visualize previously entered workouts via a dashboard. But the application lacked middleware integration with a datbase, and the focus of the assignment was to define the schema, build the Express model and routes, leveraging Mongoose in conjunction with a Mongo database deployed on Heroku.
+Functionally it is simple in that a user can enter the names of burgers to eat which appear on the left and then click a button to 'devour' the burger and it moves over to a list of devoured burgers on the right.
 
-The application is fully functional and deployed on Heroku and this link: https://fitness-trakker.herokuapp.com. Here is a screen shot of the working application's dashboard :
+The complete MCV structure was specified in the instructions, including database schema, file names and their functions and how each fits into the MVC framework. The app uses MySQL and an ORM and is deployed on Heroku using JAWS. Since the entire structure of all the components and their interactions were secified and explained in detail in the instructions, it doesn't make sense to repeat all that information here. The app follows those instructions and includes all those components.
 
-![img](https://github.com/fhsal/hw17-fitnessTracker/blob/main/fitness-tracker-dashboard-screenshot.jpg)
+I did, however, add some animation when a burger is 'devoured' and attempted to make the look polished and clean.
 
-Several components are used in the application, built around the MVC structure provided where front-end code for html, js and data are stored within the 'public' folder structure. A seed file was also provided. I added several directories and files to the app to drive the app, define schema, set routes and models, they are:
+The application is fully functional and deployed on Heroku and this link: https://burger-13.herokuapp.com/. Here is a screen shot of the working application's dashboard :
 
-(1) server.js drives the app setup by requiring express, mongoose and path; setting up the ports for local and Heroku serving, app.use configuration, mongo connection, required routes and listner to start the server.
-
-(2) index.js and workout.js provide the models for the app. workout.js defines the schema and exports the model as Workout using Mongoose to build the model.
-
-(3) html routes are driven by htmlRoutes.js which defines the endpoints for the three pages in the app: index.html for the home page, excercise.html for workout entry and update and stats.html for the dashboard.
-
-(4) api routes are driven by apiRoutes.js which requires the workout model and defines the endpoints for get/post/put workouts, which largely involve storing and retrieving json objects from the mongo database 'workout' table 'workouts'; put involves individual excercises while post and get involve storing an entire workout or retrieving all workouts via a separate route called '/api/workouts/range' where the range is always all workouts.
+![img](https://github.com/fhsal/hw13-burger/blob/main/burger-screen-shot.jpg)
 
 ---
 
 ## User Story
 
-- As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+- Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-## Business Context
+- Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+- Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-## Acceptance Criteria
-
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
-
-The user should be able to:
-
-- Add exercises to a previous workout plan.
-
-- Add new exercises to a new workout plan.
-
-- View the combined weight of multiple exercises on the `stats` page.
+- Your app will store every burger in a database, whether devoured or not.
