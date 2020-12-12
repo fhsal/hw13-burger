@@ -1,0 +1,31 @@
+.heading,
+h1 {
+  font-family: "Comic Sans MS";
+  font-weight: "bold";
+  color: darkblue;
+}
+
+h3 {
+  font-family: "Comic Sans MS";
+  font-weight: "bold";
+  color: darkblue;
+}
+
+.burger-div,
+.burger-input {
+  font-family: "Comic Sans MS";
+}
+
+html {
+  margin: 20px;
+}
+html,
+body,
+.container-flex {
+  background-color: teal;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
