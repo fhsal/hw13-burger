@@ -12,7 +12,7 @@ I did, however, add some animation when a burger is 'devoured' and attempted to 
 
 The application is fully functional and deployed on Heroku and this link: https://burger-13.herokuapp.com/. Here is a screen shot of the working application's dashboard :
 
-![img](https://github.com/fhsal/hw13-burger/blob/main/burger-screen-shot.jpg)
+![img](https://github.com/fhsal/hw13-burger/blob/main/burger-screen-shot2.jpg)
 
 ---
 
