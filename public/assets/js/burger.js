@@ -24,7 +24,10 @@ $(document).ready(function () {
 
       // Reload the page to display the updated 'to eat' and 'devoured' lists of burgers
 
-      location.reload();
+      setTimeout(function () {
+        location.reload();
+      }, 500);
+      // location.reload();
     });
   });
 });

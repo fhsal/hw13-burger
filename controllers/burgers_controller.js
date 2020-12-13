@@ -25,20 +25,16 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
-// routeto change the devoured status of a burger
+// route to change the devoured status of a burger
 
 router.put("/api/burgers/:id", function (req, res) {
-  var condition = "id = " + req.params.id;
-  console.log("condition", condition);
+  var selected = "id = " + req.params.id;
+  console.log("selected", selected);
   burger.updateOne(
     { devoured: req.body.devoured },
-    condition,
+    selected,
     function (result) {
-      if (result.changedRows == 0) {
-        return res.status(404).end();
-      } else {
-        res.status(200).end();
-      }
+      res.end();
     }
   );
 });
